@@ -16,7 +16,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Viiskulma Warriors</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -32,9 +32,58 @@
         </nav>
     </header>
 
-    <main class="container my-5 text-center">
-        <h1 class="display-4 text-danger">Gallery</h1>
-        <p class="lead mt-3">The gallery will be updated soon with photos and videos from our games and events. Stay tuned!</p>
+    <main class="container my-5">
+        <h1 class="display-4 text-danger text-center">Gallery</h1>
+        <p class="text-center lead">Explore moments from our games, training, and celebrations!</p>
+
+        <!-- Slideshow (Carousel) -->
+        <div id="galleryCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/game-day.jpg" class="d-block w-100" alt="Game Day">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Game Day</h5>
+                        <p>Our players giving their all on the ice!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/celebration.jpg" class="d-block w-100" alt="Celebration">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Celebration</h5>
+                        <p>Celebrating a hard-earned victory with our fans.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/team-huddle.jpg" class="d-block w-100" alt="Team Huddle">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Team Huddle</h5>
+                        <p>Strategizing together before the next challenge.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Image Grid -->
+        <h2 class="text-danger mt-5">Image Gallery</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <img src="img/game-day.jpg" alt="Game Day" class="img-fluid rounded">
+            </div>
+            <div class="col-md-4">
+                <img src="img/celebration.jpg" alt="Celebration" class="img-fluid rounded">
+            </div>
+            <div class="col-md-4">
+                <img src="img/team-huddle.jpg" alt="Team Huddle" class="img-fluid rounded">
+            </div>
+        </div>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
@@ -49,5 +98,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
 
 
