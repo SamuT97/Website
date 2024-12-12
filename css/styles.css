@@ -10,18 +10,19 @@
     --background-black: #000000;
     --text-white: #ffffff;
     --primary-red: #c8102e;
+    --secondary-red: #8b0f21; /* Slightly darker red for contrast */
 }
 
 /* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: var(--background-black); /* Black background */
-    color: var(--text-white); /* White text */
+    background-color: var(--background-black);
+    color: var(--text-white);
 }
 
 /* Header Styling */
 header {
-    background: var(--primary-red); /* Red background */
+    background: var(--primary-red);
     padding: 10px 0;
 }
 
@@ -41,22 +42,38 @@ header {
     display: flex;
     gap: 20px;
     justify-content: center;
-    flex-wrap: wrap; /* Responsive for smaller screens */
+    flex-wrap: wrap; /* Makes navigation responsive */
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-white);
     font-weight: bold;
-    transition: color 0.3s ease; /* Smooth transition */
+    transition: color 0.3s ease; /* Smooth hover effect */
 }
 
 .nav-links a:hover {
-    color: var(--primary-red); /* Red hover effect */
+    color: var(--primary-red);
 }
 
 .nav-links a:focus {
-    outline: 2px dashed var(--text-white); /* Accessibility focus effect */
+    outline: 2px dashed var(--text-white); /* Accessibility focus style */
+}
+
+/* Buttons and Active Elements */
+.page-link.active {
+    background-color: var(--primary-red);
+    border-color: var(--secondary-red); /* Adds contrast */
+}
+
+.list-group-item.active {
+    background-color: var(--primary-red);
+    border-color: var(--secondary-red);
+}
+
+.btn-check + .btn:hover {
+    background-color: var(--primary-red);
+    border-color: var(--secondary-red);
 }
 
 /* Footer */
@@ -69,28 +86,50 @@ footer {
 footer .social-media {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Space between icons */
+    gap: 10px;
     margin-top: 10px;
 }
 
 footer .social-media img {
     width: 30px;
-    transition: transform 0.3s ease; /* Smooth zoom on hover */
+    transition: transform 0.3s ease; /* Smooth hover zoom */
 }
 
 footer .social-media img:hover {
-    transform: scale(1.1); /* Zoom effect */
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
-/* Media Queries */
+/* Forms */
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-red);
+    border-radius: 5px;
+}
+
+form button {
+    background-color: var(--primary-red);
+    color: var(--text-white);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--secondary-red);
+}
+
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .nav-links {
-        flex-direction: column; /* Stack links on smaller screens */
+        flex-direction: column; /* Stacks navigation links vertically */
         gap: 10px;
     }
 
     .warrior-logo img {
-        width: 100px; /* Smaller logo for mobile */
+        width: 100px; /* Smaller logo for smaller screens */
     }
 
     footer {
